@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	  <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+		
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+	</head>
+<body>
+  <div align="center" ng-app="todoModule" ng-controller="todoController">
+	  <md-input-container class="md-block" >
+            <label>Enter todo</label>
+            <input ng-model="itemToAdd">
+          </md-input-container>
+	  <md-button class="md-raised md-primary" ng-click="addItem()">Add Item</md-button>
+  
+  <ul ng-repeat="item in listItems">
+    <li> {{item}} <input type="button" ng-click="removeItem($index)" value="remove"></li>
+  </ul>
+	</div>
+	
+  <script src="todo.js"></script>
+	
+</body>
+</html>
+
